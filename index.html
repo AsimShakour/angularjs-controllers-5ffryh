@@ -36,11 +36,9 @@
         <ul class=" list-group d-flex" ng-if="query">
           <li class="list-group-item" 
           ng-repeat="item in artists | filter: query |
-          orderBy:'name'">
-  <!-- https://github.com/AsimShakour/angular/blob/02_04b/builds/angular/images/Barot_Bellingham_tn.jpg?raw=true -->
+          orderBy:'name' track by item.id">
               <div class="media d-flex align-items-center">
                 <img class="rounded-circle mr-3"
-
                   ng-src="https://github.com/AsimShakour/angular/blob/02_04b/builds/angular/images/{{item.shortname}}_tn.jpg?raw=true"
                   alt="Photo of {{item.name}}">
                 <div class="media-body">

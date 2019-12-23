@@ -4,10 +4,10 @@ import angular from 'angular';
 angular.module('app', []);
 
 // Put application code here before bootstrap is called.
-angular.module('app').controller('MainCtrl', function app($scope,$http){
+angular.module('app').controller('MainCtrl', function ($scope,$http){
   $http.get('data.json').then(function(response) {
-  console.log = response.data;
-  $scope.artists = response.data;
+    console.log(response.data);
+    $scope.artists = response.data;
   })
 });
 
